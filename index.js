@@ -13,9 +13,9 @@ app.get("/", (res, req)=>{
 })
 
 app.post("/first-unique-character", timeStampLog, function (req, res){
+    let input = req.body.text_to_process;
+    // console.log(req.body, input)
     try {
-        const input = req[body['text_to_process']]
-        console.log(req.body, input)
         let sol = firstUniqueChar(input);
         let date = new Date
         const result = {
