@@ -1,5 +1,7 @@
-function timeStampLog(){
-    return new Date;
+function timeStampLog(req, res, next) {
+  console.log(new Date());
+
+  next();
 }
 
-module.exports= {timeStampLog};
+module.exports = { timeStampLog };
